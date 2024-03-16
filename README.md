@@ -35,13 +35,6 @@ Kendinize programlama dünyasında etkin bir yer ayırmaya hazır mısınız? E�
 - Spring Rest servisi ile backend yazmayı öğreniyoruz,
 - Katmanlı mimarileri öğreniyoruz.
 
-# Hedef Kitle
-
-- Üniversite öğrencileri ve yeni mezunlar
-- Sektörün ihtiyaç duyduğu teknolojiyi öğrenmek isteyenler
-- Lise öğrencileri
-- Java diline hakim olup, onu ileri seviyeye taşımak isteyenler.
-
 # Kazanımlar
 
 - Java'yı gerçek projelerde kullanıldığı gibi sıfırdan öğrenecek,
