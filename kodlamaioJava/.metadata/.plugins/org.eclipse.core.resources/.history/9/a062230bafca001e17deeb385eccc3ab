@@ -1,0 +1,63 @@
+package oopWithNLayeredApp.business;
+
+
+
+
+import java.util.Iterator;
+import java.util.List;
+
+import oopWithNLayeredApp.core.logging.Logger;
+import oopWithNLayeredApp.dataAccess.ProductDao;
+import oopWithNLayeredApp.entities.Product;
+
+public class ProductManager {
+	
+	private ProductDao productDao;
+	private List<Logger> loggers;
+	
+	
+	
+	public ProductManager(ProductDao productDao,List<Logger> loggers) {
+		
+		this.productDao = productDao;
+		this.loggers=loggers;
+	}
+
+
+
+	public void add(Product product) throws Exception {//respons request
+		// iş kuralları yazılır
+		if (product.getUnitPrice()<10) {
+			throw new Exception("Ürünün fiyatı 10 dan küçük olamaz");
+		}
+		for (Logger logger : loggers) {
+			logger.log(product.getName());
+		}
+		
+		
+		/*
+		JdbcProductDao productDao = new JdbcProductDao();
+		productDao.add(product);
+		*/
+		//sistemi jdbc den hibernate geçirirken aşamalı geçilebilir bu durumda interface yazılır
+		//dataAccess ProductDao
+		
+		
+		//ProductDao productDao=new HibernateProductDao(); bu kod kötü kod
+		productDao.add(product);
+		
+		//yukarıdaki kodda hıbernate ve jdbc ikisini de tutabilir alttaki örnek gibi
+		
+		
+		/*
+		ProductDao productDao2=new JdbcProductDao();
+		productDao.add(product);
+		kurak 1: bir katman Başka bir katmanın classını kullanırken sadece interface ile erişim kurmalı
+	 	businnes ve date acsess arayuz api geçerli 
+		
+		*/
+		
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+package oop1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// oop nesne yönelimli programlama
+		String mesaj = "vade oranı";
+		// set value
+		Product product1 = new Product();
+		product1.setName("delonghi kahve makınesi");
+		product1.setDiscount(7);
+		product1.setUnitPrice(3);
+		product1.setImageUrl("image.url");
+		
+		// burda okuyoruz atama yok get işlemi denir
+		// System.out.println(product1.name);
+		
+		// set value
+		Product product2 = new Product();
+		product2.setName("smag kahve makınesi");
+		product2.setDiscount(72);
+		product2.setUnitPrice(33);
+		product2.setImageUrl("image2.url");
+		
+		// set value
+		Product product3 = new Product();
+		product3.setName("delfi kahve makınesi");
+		product3.setDiscount(71);
+		product3.setUnitPrice(32);
+		product3.setImageUrl("image3.url");
+		
+		
+		Product[] products= {product1,product2,product3};
+		
+		for (Product product : products) {
+			System.out.println(product.getName());
+			
+		}
+
+	}
+
+}

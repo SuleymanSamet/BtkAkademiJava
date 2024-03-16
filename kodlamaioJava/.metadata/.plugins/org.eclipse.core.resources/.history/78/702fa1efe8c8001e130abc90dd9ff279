@@ -1,0 +1,18 @@
+package oop1;
+
+//classlar PascalCase olarak isimlendirilir,kodları ingilizce isimlendiricez
+public class Product {
+	//ürünü tanımlayabilicek ortamı hazırlıyoruz Product diye bir nesnemiz var içindede alttaki bilgiler var
+	//klasın fieldları camelCase olarak yazılır
+	//private bu klasore ozel demek
+	private String name;
+	private double unitPrice;//birim fiyatı
+	private double discount;//indirim oranı
+	private String imageUrl;
+	private int unitInStock;
+	
+	
+	
+	
+
+}

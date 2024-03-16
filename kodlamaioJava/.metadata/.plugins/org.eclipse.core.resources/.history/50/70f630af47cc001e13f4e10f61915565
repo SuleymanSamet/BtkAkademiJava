@@ -1,0 +1,20 @@
+package kodlamaIoWeb.business;
+
+import kodlamaIoWeb.core.logging.Logger;
+import kodlamaIoWeb.dataAccess.CourseDao;
+
+public class CourseManager {
+	private CourseDao courseDao;
+	private Logger[] loggers;
+	
+	public CourseManager(CourseDao courseDao, Logger[] loggers) {
+		super();
+		this.courseDao = courseDao;
+		this.loggers = loggers;
+	}
+	
+	
+		
+	}
+
+}

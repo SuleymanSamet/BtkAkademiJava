@@ -1,0 +1,43 @@
+package kodlamaIoWeb;
+
+import kodlamaIoWeb.business.CategoryManager;
+import kodlamaIoWeb.business.CourseManager;
+import kodlamaIoWeb.core.logging.DatabaseLogger;
+import kodlamaIoWeb.core.logging.FileLogger;
+import kodlamaIoWeb.core.logging.Logger;
+import kodlamaIoWeb.core.logging.MailLogger;
+import kodlamaIoWeb.dataAccess.HibernateDao;
+import kodlamaIoWeb.dataAccess.JdbcDao;
+import kodlamaIoWeb.entities.Category;
+import kodlamaIoWeb.entities.Course;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		
+		Course course=new Course(1,"Java",100);
+		Course course2=new Course(2, "Html", 20);
+		
+		
+		Logger[] loggers= {new DatabaseLogger(),new FileLogger(),new MailLogger() };
+		CourseManager courseManager=new CourseManager(new HibernateDao(), loggers);
+		courseManager.add(course);
+		courseManager.add(course2);
+		
+		Category category=new Category(1,"Frontend");
+		Category category2=new Category(2,"Backend");
+		
+		//Logger[] loggers2= {};
+		CategoryManager categoryManager=new CategoryManager(new JdbcDao(), loggers);
+		categoryManager.add(category);
+		categoryManager.add(category2);
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

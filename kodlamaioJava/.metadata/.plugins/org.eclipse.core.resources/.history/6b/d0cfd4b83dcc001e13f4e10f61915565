@@ -1,0 +1,12 @@
+package kodlamaIoWeb;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// eğitmen, kategori ve kurs
+		//hem jdbc hem de hibernate üzerinde yazmış gibi simüle ediniz
+		
+
+	}
+
+}

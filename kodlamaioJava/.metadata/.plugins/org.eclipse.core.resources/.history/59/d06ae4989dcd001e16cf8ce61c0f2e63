@@ -1,0 +1,27 @@
+package kodlamaIoWeb.dataAccess;
+
+import kodlamaIoWeb.entities.Category;
+import kodlamaIoWeb.entities.Course;
+import kodlamaIoWeb.entities.Instructor;
+
+public class JdbcDao implements CategoryDao,CourseDao,InstructorDao{
+
+	@Override
+	public void add(Instructor instructor) {
+		System.out.println("eğitmen Jdbc ile eklendi");
+		
+	}
+
+	@Override
+	public void add(Course course) {
+		System.out.println("Kurs Jdbc ile eklendi");
+		
+	}
+
+	@Override
+	public void add(Category category) {
+		System.out.println("Kategori Jdbc ile eklendi "+category.getName());
+		
+	}
+
+}

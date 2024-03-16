@@ -1,0 +1,15 @@
+package oopWithNLayeredApp;
+
+public class Main {
+	public static void main(String[] args) {
+		//Data Access kod blogu veri erişimi
+		//business iş geliştirme ile ilgili kodlar
+		//uı 
+		
+		
+		//JDBC core java ile gelen bir alt yapı veri bağlantılarını yapılır
+		//Hibernet-ORM 
+		//JPA
+	}
+
+}

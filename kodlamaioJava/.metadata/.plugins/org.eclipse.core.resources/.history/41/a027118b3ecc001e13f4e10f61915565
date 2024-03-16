@@ -1,0 +1,5 @@
+package kodlamaIoWeb.entities;
+
+public class Category {
+
+}

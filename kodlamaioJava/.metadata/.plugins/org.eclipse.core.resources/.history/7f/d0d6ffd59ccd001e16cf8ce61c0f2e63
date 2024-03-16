@@ -1,0 +1,28 @@
+package kodlamaIoWeb.dataAccess;
+
+import kodlamaIoWeb.business.CourseManager;
+import kodlamaIoWeb.entities.Category;
+import kodlamaIoWeb.entities.Course;
+import kodlamaIoWeb.entities.Instructor;
+
+public class HibernateDao implements CategoryDao,CourseDao,InstructorDao{
+
+	@Override
+	public void add(Instructor instructor) {
+		System.out.println("eğitmen hibernate ile eklendi"+instructor);
+		
+	}
+
+	@Override
+	public void add(Course course) {
+		System.out.println("Kurs hibernate ile eklendi");
+		
+	}
+
+	@Override
+	public void add(Category category) {
+		System.out.println("Kategori hibernate ile eklendi");
+		
+	}
+
+}

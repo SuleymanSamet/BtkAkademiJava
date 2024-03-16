@@ -1,0 +1,55 @@
+
+Java'da Değer ve Referans Tipleri
+Java'da iki tür veri tipi vardır: değer tipleri ve referans tipleri. Farklı bellekte saklanma ve işlenme biçimleri nedeniyle bu iki tip arasındaki farkı anlamak önemlidir.
+
+Değer Tipleri:
+
+Tanımı: Değer tipleri, veriyi doğrudan saklayan veri türleridir.
+Örnekler: int, boolean, char, float, double
+Bellekte Saklama: Değer tipleri, belleğin stack bölgesinde saklanır.
+Atama: Bir değer tipine bir değer atandığında, yeni bir bellek konumu oluşturulur ve değer kopyalanır.
+Değişiklik: Bir değer tipini değiştirmek, yalnızca o değişkenin kopyasını etkiler.
+Örnek:
+Java
+int sayi1 = 10;
+int sayi2 = sayi1;
+
+sayi1 = 20;
+
+System.out.println(sayi1); // 20
+System.out.println(sayi2); // 10
+Kodu dikkatli kullanın.
+Bu örnekte, sayi1 ve sayi2 her ikisi de int tipindedir (değer tipi). sayi1'e 10 değeri atanır ve sonra sayi2'ye sayi1 atanır. Bu, sayi2'nin sayi1'in değerinin bir kopyasını aldığı anlamına gelir. Daha sonra sayi1 20 olarak değiştirilir, ancak bu sayi2'yi etkilemez.
+
+Referans Tipleri:
+
+Tanımı: Referans tipleri, verinin bellekteki adresini saklayan veri türleridir.
+Örnekler: String, Object, diziler (int[], String[])
+Bellekte Saklama: Referans tipleri, belleğin heap bölgesinde saklanır.
+Atama: Bir referans tipine bir değer atandığında, yeni bir bellek konumu oluşturulur ve adres kopyalanır.
+Değişiklik: Bir referans tipini değiştirmek, aynı adrese atanan tüm değişkenleri etkiler.
+Örnek:
+Java
+String isim1 = "Ahmet";
+String isim2 = isim1;
+
+isim1 = "Mehmet";
+
+System.out.println(isim1); // Mehmet
+System.out.println(isim2); // Mehmet
+Kodu dikkatli kullanın.
+Bu örnekte, isim1 ve isim2 her ikisi de String tipindedir (referans tipi). isim1'e "Ahmet" değeri atanır ve sonra isim2'ye isim1 atanır. Bu, isim2'nin isim1'in adresinin bir kopyasını aldığı anlamına gelir. Daha sonra isim1 "Mehmet" olarak değiştirilir ve bu isim2'yi de etkiler.
+
+Özet:
+
+Özellik	Değer Tipleri	Referans Tipleri
+Tanımı	Veriyi doğrudan saklar	Verinin adresini saklar
+Örnekler	int, boolean, char, float, double	String, Object, diziler
+Bellekte Saklama	Stack	Heap
+Atama	Değer kopyalanır	Adres kopyalanır
+Değişiklik	Yalnızca o değişkenin kopyasını etkiler	Aynı adrese atanan tüm değişkenleri etkiler
+Önemli Noktalar:
+
+Değer tipleri ve referans tipleri arasındaki farkı anlamak, Java'da programlama yaparken çok önemlidir.
+Hangi veri tipinin kullanılacağı, programın mantığına ve işlevine göre belirlenmelidir.
+Değer tipleri genellikle basit veriler için kullanılırken, referans tipleri daha karmaşık veriler için kullanılır.

@@ -1,0 +1,16 @@
+package oopWithNLayeredApp.dataAccess;
+
+import oopWithNLayeredApp.entities.Product;
+
+public class JdbcProductDao {
+	//dao data access nesnesi oldunu anlatmak için kullanılır
+	public void add(Product product) {
+		//bu katman sadece db erişim kodları yazılır
+		System.out.println("JDBC ile veri tabanına eklendi");
+		
+	}
+	
+
+}
+
+

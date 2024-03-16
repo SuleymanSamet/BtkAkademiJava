@@ -1,0 +1,14 @@
+package kodlamaIoWeb.dataAccess;
+
+//import java.util.List;
+
+import kodlamaIoWeb.entities.Course;
+
+public interface CourseDao {
+	void add(Course course );
+	
+	List<Course> getAll();
+    Course getName(String name);
+    
+
+}

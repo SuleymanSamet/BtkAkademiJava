@@ -1,0 +1,24 @@
+package kodlamaIoWeb.business;
+
+
+import kodlamaIoWeb.core.logging.Logger;
+import kodlamaIoWeb.dataAccess.CategoryDao;
+import kodlamaIoWeb.entities.Category;
+
+public class CategoryManager {
+	CategoryDao categoryDao;
+	Logger[] loggers;
+	
+	public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
+		super();
+		this.categoryDao = categoryDao;
+		this.loggers = loggers;
+	}
+	public void add(Category category){
+		for (Logger logger:loggers) {
+			logger.log(category.getName());
+			
+		}
+		
+	}
+}

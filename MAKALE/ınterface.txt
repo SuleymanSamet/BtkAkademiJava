@@ -1,0 +1,73 @@
+Java'da Arayüzler (Interfaces)
+Arayüzler, Java'da bir sözleşme gibi davranır. Bir arayüz, bir sınıfın sahip olması gereken metotlari ve sabitleri tanımlar. Arayüzler, soyutlama ve çoklu kalıtım gibi önemli programlama kavramlarını uygulamak için kullanılır.
+
+Arayüz Oluşturma:
+
+Java
+public interface Islem {
+    void topla(int a, int b);
+    void cikar(int a, int b);
+}
+Kodu dikkatli kullanın.
+Bu kodda, Islem adında bir arayüz oluşturduk. Bu arayüz, topla ve cikar adında iki metodu tanımlıyor.
+
+Arayüz Kullanma:
+
+Java
+public class HesapMakinesi implements Islem {
+    @Override
+    public void topla(int a, int b) {
+        System.out.println("Toplam: " + (a + b));
+    }
+
+    @Override
+    public void cikar(int a, int b) {
+        System.out.println("Fark: " + (a - b));
+    }
+}
+Kodu dikkatli kullanın.
+Bu kodda, HesapMakinesi adında bir sınıf oluşturduk. Bu sınıf, Islem arayüzünü uyguluyor (implements). Bu, HesapMakinesi sınıfının Islem arayüzünde tanımlı tüm metotlari override etmesi gerektiği anlamına gelir.
+
+Arayüzlerin Avantajları:
+
+Soyutlama: Arayüzler, bir sınıfın nasıl çalıştığının ayrıntılarını gizler ve sadece ne yapacağını tanımlar.
+Çoklu Kalıtım: Bir sınıf, birden fazla arayüzü uygulayarak birden fazla kalıtım elde edebilir.
+Polimorfizm: Farklı sınıflar aynı arayüzü uygulayabilir ve bu da polimorfik davranışa izin verir.
+Örnek:
+
+Java
+public interface Ucacak {
+    void uc();
+}
+
+public class Kus implements Ucacak {
+    @Override
+    public void uc() {
+        System.out.println("Kuş uçuyor...");
+    }
+}
+
+public class Ucak implements Ucacak {
+    @Override
+    public void uc() {
+        System.out.println("Uçak uçuyor...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Ucacak kus = new Kus();
+        Ucacak ucak = new Ucak();
+
+        kus.uc();
+        ucak.uc();
+    }
+}
+Kodu dikkatli kullanın.
+Bu örnekte, Ucacak adında bir arayüz ve Kus ve Ucak adında iki sınıf oluşturduk. Her iki sınıf da Ucacak arayüzünü uygular. Main sınıfında, Kus ve Ucak nesneleri oluşturduk ve uc metodunu çağırdık. Her iki nesne de farklı şekilde uçsa da, aynı arayüzü kullandıkları için aynı şekilde işlenebilirler.
+
+Özet:
+
+Arayüzler, bir sınıfın sahip olması gereken metotlari ve sabitleri tanımlar.
+Arayüzler, soyutlama ve çoklu kalıtım gibi önemli programlama kavramlarını uygulamak için kullanılır.
+Arayüzler, farklı sınıfların aynı şekilde işlenmesini sağlar.

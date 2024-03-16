@@ -1,0 +1,23 @@
+package oopWithNLayeredApp;
+
+import oopWithNLayeredApp.business.ProductManager;
+import oopWithNLayeredApp.dataAccess.HibernateProductDao;
+import oopWithNLayeredApp.entities.Product;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+		//Data Access kod blogu veri erişimi
+		//business iş geliştirme ile ilgili kodlar
+		//uı 
+		
+		
+		//JDBC core java ile gelen bir alt yapı veri bağlantılarını yapılır
+		//Hibernet-ORM 
+		//JPA
+		Product product1=new Product(1,"Iphone Xr",30000);
+		
+		ProductManager productManager=new ProductManager(new HibernateProductDao());
+		productManager.add(product1);
+	}
+
+}

@@ -1,0 +1,8 @@
+package kodlamaIoWeb.dataAccess;
+
+
+
+public interface CategoryDao {
+	void add(Category category);
+
+}

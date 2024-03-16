@@ -1,0 +1,17 @@
+package kodlamaIoWeb.business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlamaIoWeb.core.logging.Logger;
+import kodlamaIoWeb.dataAccess.CategoryDao;
+
+public class CategoryManager {
+	CategoryDao categoryDao;
+	Logger[] loggers;
+	public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
+		super();
+		this.categoryDao = categoryDao;
+		this.loggers = loggers;
+	}
+}

@@ -1,0 +1,5 @@
+package kodlamaIoWeb.dataAccess;
+
+public interface InstructorDao {
+
+}

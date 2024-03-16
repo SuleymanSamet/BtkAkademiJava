@@ -1,0 +1,21 @@
+package oop1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// oop nesne yönelimli programlama 
+		String mesaj="vade oranı";
+		//set value 
+		Product product1=new Product();
+		product1.name="Delongi kahve makinesi";
+		product1.unitPrice=7500;
+		product1.discount=7;
+		product1.unitInStock=3;
+		product1.imageUrl="dolphi.jpg";
+		//burda okuyoruz atama yok get işlemi denir
+		// System.out.println(product1.name);
+		
+
+	}
+
+}
