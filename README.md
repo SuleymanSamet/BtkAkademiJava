@@ -16,7 +16,7 @@ Hiç programlama bilmediğinizi düşünerek, sıfırdan başlıyor ve tüm prog
 - SOLID yazılım geliştirme prensiplerini öğrenir.
 - Tasarım Desenlerine (Design Patterns) giriş yapar.
 
-#İleri Seviye Java
+# İleri Seviye Java
 
 # Eğitim Amacı
 
