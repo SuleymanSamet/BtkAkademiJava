@@ -8,7 +8,7 @@ public interface Islem {
     void topla(int a, int b);
     void cikar(int a, int b);
 }
-Kodu dikkatli kullanın.
+
 Bu kodda, Islem adında bir arayüz oluşturduk. Bu arayüz, topla ve cikar adında iki metodu tanımlıyor.
 
 Arayüz Kullanma:
@@ -25,7 +25,7 @@ public class HesapMakinesi implements Islem {
         System.out.println("Fark: " + (a - b));
     }
 }
-Kodu dikkatli kullanın.
+
 Bu kodda, HesapMakinesi adında bir sınıf oluşturduk. Bu sınıf, Islem arayüzünü uyguluyor (implements). Bu, HesapMakinesi sınıfının Islem arayüzünde tanımlı tüm metotlari override etmesi gerektiği anlamına gelir.
 
 Arayüzlerin Avantajları:
@@ -63,7 +63,7 @@ public class Main {
         ucak.uc();
     }
 }
-Kodu dikkatli kullanın.
+
 Bu örnekte, Ucacak adında bir arayüz ve Kus ve Ucak adında iki sınıf oluşturduk. Her iki sınıf da Ucacak arayüzünü uygular. Main sınıfında, Kus ve Ucak nesneleri oluşturduk ve uc metodunu çağırdık. Her iki nesne de farklı şekilde uçsa da, aynı arayüzü kullandıkları için aynı şekilde işlenebilirler.
 
 Özet:
